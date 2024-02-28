@@ -10,14 +10,13 @@
 require 'faker'
 
 676.times do
+product = Product.new
 
-  product = Product.new
+  product.title = Faker::Commerce.product_name #=> "Practical Granite Shirt"
 
-product.title = Faker::Commerce.product_name #=> "Practical Granite Shirt"
+  product.price = Faker::Commerce.price #=> 44.6
 
-product.price = Faker::Commerce.price #=> 44.6
-
-product.stock_quantity = Faker::Number.number(digits: 2) #=> 0~99
+  product.stock_quantity = Faker::Number.number(digits: 2) #=> 0~99
 
   product.save
 end

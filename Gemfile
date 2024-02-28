@@ -67,3 +67,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# Faker gem file for generating fake db data
+gem 'faker'
